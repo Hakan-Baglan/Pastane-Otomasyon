@@ -16,12 +16,7 @@ namespace WebApplication1.Controllers
         {
             _pieRepsitory = pieRepository;
             _categoryRepository = categoryRepository;
-            foreach (Pie item in _pieRepsitory.AllPies)
-            {
-                item.Category = _categoryRepository.AllCategories.FirstOrDefault(p => p.CategoryId == item.CategoryId);
-            }
-            Console.WriteLine("Seleam");
-        } 
+        }
 
         public ViewResult List()
         {

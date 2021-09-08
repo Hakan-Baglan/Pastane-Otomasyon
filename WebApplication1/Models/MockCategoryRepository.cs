@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class MockCategoryRepository: ICategoryRepository
+    public class MockCategoryRepository : ICategoryRepository
     {
+
         public IEnumerable<Category> AllCategories =>
             new List<Category>
             {
@@ -14,6 +15,10 @@ namespace WebApplication1.Models
                 new Category{CategoryId=2, CategoryName="cheese cakes",Description="cheesy all the way"},
                 new Category{CategoryId=3, CategoryName="Seasonal Pies",Description="get in the mood fora seasonal pie"}
             };
+        public Category GetPieById(int id)
+        {
+            return AllCategories.FirstOrDefault(el => el.CategoryId == id);
+        }
 
     }
 }

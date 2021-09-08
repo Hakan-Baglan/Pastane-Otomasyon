@@ -7,6 +7,7 @@ namespace WebApplication1.Models
 {
     public interface ICategoryRepository
     {
-      IEnumerable<Category> AllCategories { get; }
+        IEnumerable<Category> AllCategories { get; }
+        Category GetPieById(int id);
     }
 }
