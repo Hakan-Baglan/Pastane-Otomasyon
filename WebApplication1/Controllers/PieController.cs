@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers
                 item.Category = _categoryRepository.AllCategories.FirstOrDefault(p => p.CategoryId == item.CategoryId);
             }
             Console.WriteLine("Seleam");
-        }
+        } 
 
         public ViewResult List()
         {
